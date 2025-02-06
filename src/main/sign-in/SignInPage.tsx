@@ -5,7 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Controller, useForm } from "react-hook-form";
 import { useSignInMutation } from "../../auth/AuthApi";
 import { useNavigate } from "react-router-dom";
-import { jwtDecode } from "jwt-decode";
+// import { jwtDecode } from "jwt-decode";
 import { useAuth } from "../../auth/AuthContext";
 
 const schema = z.object({
@@ -40,7 +40,7 @@ const SignInPage: React.FC = () => {
     resolver: zodResolver(schema),
   });
 
-  const { isValid, isSubmitting, errors, touchedFields } = formState;
+  const { isValid, isSubmitting, errors } = formState;
 
   const onSubmit = (data: FormType) => {
     // console.log('data ', data);

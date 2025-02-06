@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import {
   Dialog,
   DialogTitle,
@@ -62,7 +62,7 @@ const CreateUserDialog: React.FC<CreateUserDialogProps> = ({ open, onClose, edit
     resolver: zodResolver(schema),
   });
 
-  const { isValid, isSubmitting, errors, touchedFields } = formState;
+  const { isValid, isSubmitting, errors } = formState;
 
   const [createUser] = useCreateUserMutation();
   const [updateUser] = useUpdateUserMutation();

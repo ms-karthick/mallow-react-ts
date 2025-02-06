@@ -6,17 +6,15 @@ import {
   TableContainer,
   TableHead,
   TableRow,
-  Paper,
+  // Paper,
   TablePagination,
-  TextField,
   Avatar,
   IconButton,
-  Card,
   Grid,
 } from "@mui/material";
 import { useUserListsQuery } from "./Api";
 import { Edit, Delete } from "@mui/icons-material";
-import { styled } from "@mui/material/styles";
+// import { styled } from "@mui/material/styles";
 import { UserType } from "./Dashboard";
 
 const UserList = ({
@@ -47,22 +45,24 @@ const UserList = ({
   // Handle pagination change
   const handleChangePage = (event: unknown, newPage: number) => {
     setPage(newPage);
+    console.log(event);
+    
   };
 
   const handleChangeRowsPerPage = (event: React.ChangeEvent<HTMLInputElement>) => {
     setRowsPerPage(parseInt(event.target.value, 10));
     setPage(0);
   };
-  const Item = styled(Paper)(({ theme }) => ({
-    backgroundColor: "#fff",
-    ...theme.typography.body2,
-    padding: theme.spacing(1),
-    textAlign: "center",
-    color: theme.palette.text.secondary,
-    ...theme.applyStyles("dark", {
-      backgroundColor: "#1A2027",
-    }),
-  }));
+  // const Item = styled(Paper)(({ theme }) => ({
+  //   backgroundColor: "#fff",
+  //   ...theme.typography.body2,
+  //   padding: theme.spacing(1),
+  //   textAlign: "center",
+  //   color: theme.palette.text.secondary,
+  //   ...theme.applyStyles("dark", {
+  //     backgroundColor: "#1A2027",
+  //   }),
+  // }));
 
   return (
     <Grid item xs={12}>

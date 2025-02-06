@@ -1,5 +1,6 @@
-import React, { useState } from "react";
-import { Card, CardContent, Typography, Grid, Paper, Avatar, IconButton } from "@mui/material";
+
+import { useState } from "react";
+import { Card, CardContent, Typography, Grid, Avatar, IconButton } from "@mui/material";
 import { Edit, Delete } from "@mui/icons-material";
 import { useUserListsQuery } from "./Api";
 import { UserType } from "./Dashboard";
