@@ -53,7 +53,10 @@ const SignInPage: React.FC = () => {
         login(response);
 
         navigate("/dashboard");
-      });
+      }).
+      catch((error) => {
+        alert(error?.response?.data?.error)
+      })
   };
 
   return (
